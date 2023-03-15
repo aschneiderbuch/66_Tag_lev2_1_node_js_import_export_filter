@@ -27,7 +27,15 @@ function mehrEinwohnerAls(paraZahl, inputArrMitObj) {
 
 /* funktion 
 rückgabe     Städte mit   weniger   als 100 000 Einwohner */
+const wenigerEinwohnerAls1Para = (arr) => {
+    return arr.filter((i) => i.population <= 100000)
+}
+
+const wenigerEinwohnerAls = (z, arr) => {
+    return arr.filter((i) => i.population <= Number(z))
+}
 
 
-
-export { mehrEinwohnerAls }
+export { mehrEinwohnerAls, 
+    wenigerEinwohnerAls1Para,
+    wenigerEinwohnerAls }
