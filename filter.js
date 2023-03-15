@@ -10,15 +10,17 @@ function mehrEinwohnerAls(paraZahl, inputArrMitObj) {
     let arrObj = inputArrMitObj
 
     let ergebniss = []
+    let counter = 0 
     arrObj.map((i) => {
         if (i.population >= z) {
+            counter ++
             return ergebniss.push(i)
         }
         /*      else {
                  
             }  */
     })
-    return ergebniss
+    return ["Gefundene Ergebnisse= ", counter, ergebniss ]
 
 }
 
@@ -27,7 +29,7 @@ function mehrEinwohnerAls(paraZahl, inputArrMitObj) {
 
 /* funktion 
 rückgabe     Städte mit   weniger   als 100 000 Einwohner */
-const wenigerEinwohnerAls1Para = (arr) => {
+const wenigerEinwohnerAls100000 = (arr) => {
     return arr.filter((i) => i.population <= 100000)
 }
 
@@ -37,5 +39,5 @@ const wenigerEinwohnerAls = (z, arr) => {
 
 
 export { mehrEinwohnerAls, 
-    wenigerEinwohnerAls1Para,
+    wenigerEinwohnerAls100000,
     wenigerEinwohnerAls }
